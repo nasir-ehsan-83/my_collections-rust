@@ -1,0 +1,1 @@
+rd_("CjSorts a slice in-place using the insertion sort algorithm.CjSorts a array in-place using the insertion sort algorithm.")
