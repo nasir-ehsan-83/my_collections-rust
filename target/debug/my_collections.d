@@ -1,1 +1,0 @@
-/home/nasir_ehsan/Programing/rust/my_collections/target/debug/my_collections: /home/nasir_ehsan/Programing/rust/my_collections/src/lib.rs /home/nasir_ehsan/Programing/rust/my_collections/src/main.rs /home/nasir_ehsan/Programing/rust/my_collections/src/sort/mod.rs /home/nasir_ehsan/Programing/rust/my_collections/src/sort/simple_sort.rs
