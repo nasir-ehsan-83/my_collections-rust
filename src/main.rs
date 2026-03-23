@@ -1,13 +1,17 @@
-use my_collections::sort::insertion_sort;
+use my_collections::sort::{
+    insertion_sort,
+    bubble_sort
+};
 
 fn main() {
-    let mut array: [i32; 7] = [3, 2, 6, 2, 8, 5, 2];
-    println!("Before sorting: {:?}", &array);
-    insertion_sort(&mut array);
-    println!("After sorting: {:?}", &array);
+    
+    let mut array_i: [i32; 7] = [3, 2, 6, 2, 8, 5, 2];
+    println!("Before sorting: {:?}", &array_i);
+    insertion_sort(&mut array_i);
+    println!("After sorting: {:?}", &array_i);
 
     println!();
-
+    /*
     let mut array1: [u32; 7] = [3, 2, 6, 2, 8, 5, 2];
     println!("Before sorting: {:?}", &array1);
     insertion_sort(&mut array1);
@@ -27,4 +31,12 @@ fn main() {
     println!("Before sorting: {:?}", float);
     insertion_sort(&mut float);
     println!("After sorting: {:?}", float);
+
+    */
+    let mut array_b: [i32; 7] = [3, 2, 6, 2, 8, 5, 2];
+    println!("Before sorting: {:?}", &array_b);
+    bubble_sort(&mut array_b);
+    println!("After sorting: {:?}", &array_b);
+
+    println!();
 }
