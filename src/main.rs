@@ -1,10 +1,13 @@
 use my_collections::sort::{
     insertion_sort,
     bubble_sort,
-    selection_sort
+    selection_sort,
+    merge_sort
 };
 
 fn main() {
+    
+    println!();
     
     let mut array_i: [i32; 7] = [3, 2, 6, 2, 8, 5, 2];
     println!("Insertoin sort ");
@@ -34,6 +37,11 @@ fn main() {
     insertion_sort(&mut float);
     println!("After sorting: {:?}", float);
 
+    let mut strings: [&str; 3] = ["banana", "apple", "cherry"];
+    println!("After soring: {:?}", &strings);
+    insertion_sort(&mut strings);
+    println!("After soring: {:?}", &strings);
+    
     */
     println!("Bubble sort");
     let mut array_b: [i32; 7] = [3, 2, 6, 2, 8, 5, 2];
@@ -48,4 +56,14 @@ fn main() {
     println!("Before sorting: {:?}", &array_s);
     selection_sort(&mut array_s);
     println!("After soring: {:?}", &array_s);
+
+    println!();
+    
+    println!("Merge sort");
+    let mut array_s: [i32; 7] = [3, 6, 2, 6, 2, 7, 1];
+    println!("Before sorting: {:?}", &array_s);
+    merge_sort(&mut array_s);
+    println!("After soring: {:?}", &array_s);
+
+    println!();
 }

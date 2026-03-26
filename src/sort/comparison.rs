@@ -1,3 +1,4 @@
+use std::vec::Vec;
 /// Sorts a slice in-place using the insertion sort algorithm.
 ///
 /// Insertion sort is a simple sorting algorithm that builds the final sorted array
@@ -35,5 +36,74 @@ pub fn insertion_sort<T: PartialOrd + Clone>(array: &mut [T]) {
         }
 
         array[j] = key;
+    }
+}
+
+
+
+
+/// Sorts a slice in-place using the Merge Sort algorithm.
+///
+/// Merge Sort is a divide-and-conquer algorithm that recursively splits the array 
+/// in half, sorts the halves, and merges them back together. This implementation
+/// uses Insertion Sort for small sub-arrays to improve performance.
+///
+/// # Performance
+///
+/// * **Time Complexity**: $O(n \log n)$ (worst/average/best case).
+/// * **Space Complexity**: $O(n)$ (temporary buffers for merging).
+/// * **Stability**: Stable.
+pub fn merge_sort<T: PartialOrd + Clone>(array: &mut [T]) {
+    if array.len() <= 1 {
+        return;
+    }
+    rec_merge_sort(array);
+}
+
+fn rec_merge_sort<T: PartialOrd + Clone>(array: &mut [T]) {
+    let n: usize = array.len();
+    
+    // Optimization: Use insertion sort for small arrays (threshold 16-32)
+    if n <= 16 {
+        insertion_sort(array);
+        return;
+    }
+
+    let mid: usize = n / 2;
+    
+    // Recursively sort the two halves
+    rec_merge_sort(&mut array[..mid]);
+    rec_merge_sort(&mut array[mid..]);
+
+    // Merge the sorted halves
+    merge(array, mid);
+}
+
+fn merge<T: PartialOrd + Clone>(array: &mut [T], mid: usize) {
+    // Create temporary copies of the left and right halves
+    let left: Vec<T> = array[..mid].to_vec();
+    let right: Vec<T> = array[mid..].to_vec();
+
+    let mut i: usize = 0; // index for left
+    let mut j: usize = 0; // index for right
+    let mut k: usize = 0; // index for original array
+
+    while i < left.len() && j < right.len() {
+        if left[i] <= right[j] {
+            array[k] = left[i].clone();
+            i += 1;
+        } else {
+            array[k] = right[j].clone();
+            j += 1;
+        }
+        k += 1;
+    }
+
+    // Copy remaining elements
+    if i < left.len() {
+        array[k..].clone_from_slice(&left[i..]);
+    }
+    if j < right.len() {
+        array[k..].clone_from_slice(&right[j..]);
     }
 }
