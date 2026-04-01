@@ -3,3 +3,4 @@ pub mod bubble;
 pub mod selection;
 pub mod shell;
 pub mod gnome;
+pub mod cocktail_shaker;

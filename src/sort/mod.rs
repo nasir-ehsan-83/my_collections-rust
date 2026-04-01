@@ -6,3 +6,4 @@ pub use comparison::bubble::bubble_sort;
 pub use comparison::selection::selection_sort;
 pub use comparison::shell::shell_sort;
 pub use comparison::gnome::gnome_sort;
+pub use comparison::cocktail_shaker::cocktail_shaker_sort;
