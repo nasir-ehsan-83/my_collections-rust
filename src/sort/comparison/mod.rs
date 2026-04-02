@@ -4,3 +4,4 @@ pub mod selection;
 pub mod shell;
 pub mod gnome;
 pub mod cocktail_shaker;
+pub mod odd_even;
