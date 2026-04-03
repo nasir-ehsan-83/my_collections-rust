@@ -5,3 +5,4 @@ pub mod shell;
 pub mod gnome;
 pub mod cocktail_shaker;
 pub mod odd_even;
+pub mod comb;
