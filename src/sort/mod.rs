@@ -10,3 +10,4 @@ pub use comparison::cocktail_shaker::cocktail_shaker_sort;
 pub use comparison::odd_even::odd_even_sort;
 pub use comparison::comb::comb_sort;
 pub use comparison::tree::tree_sort;
+pub use comparison::heap::heap_sort;
