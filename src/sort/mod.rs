@@ -15,3 +15,4 @@ pub use comparison::tree::tree_sort;
 pub use comparison::heap::heap_sort;
 
 pub use hybrid::quick::quick_sort;
+pub use hybrid::merge::merge_sort;
