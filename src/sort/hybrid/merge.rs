@@ -31,7 +31,7 @@ pub fn merge_sort<T: Ord + Clone + Copy>(array: &mut [T]) {
     array.copy_from_slice(&merged);
 }
 
-fn merge<T: Ord + Clone>(left: &[T], right: &[T], result: &mut [T]) {
+pub fn merge<T: Ord + Clone>(left: &[T], right: &[T], result: &mut [T]) {
     let mut i = 0;
     let mut j = 0;
     let mut k = 0;

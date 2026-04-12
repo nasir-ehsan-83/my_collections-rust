@@ -17,3 +17,4 @@ pub use comparison::heap::heap_sort;
 pub use hybrid::quick::quick_sort;
 pub use hybrid::merge::merge_sort;
 pub use hybrid::pancake::pancake_sort;
+pub use hybrid::tim::tim_sort;
