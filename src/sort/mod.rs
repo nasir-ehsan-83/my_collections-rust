@@ -19,3 +19,4 @@ pub use hybrid::merge::merge_sort;
 pub use hybrid::pancake::pancake_sort;
 pub use hybrid::tim::tim_sort;
 pub use hybrid::bitonic::bitonic_sort;
+pub use hybrid::intro::intro_sort;
