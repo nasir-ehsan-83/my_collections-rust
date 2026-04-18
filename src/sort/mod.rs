@@ -14,6 +14,8 @@ pub use comparison::comb::comb_sort;
 pub use comparison::tree::tree_sort;
 pub use comparison::heap::heap_sort;
 
+pub use distribution::radix::radix_sort;
+
 pub use hybrid::quick::quick_sort;
 pub use hybrid::merge::merge_sort;
 pub use hybrid::pancake::pancake_sort;
