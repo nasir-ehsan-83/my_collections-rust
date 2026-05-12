@@ -1,21 +1,30 @@
-/// Sorts a slice in-place using the gnome sort algorithm.
+/// # Gnome Sort
 ///
-/// Gnome sort is similar to insertion sort but uses swapping to move elements
-/// into the correct position by stepping backward when necessary.
+/// A simple sorting algorithm similar to insertion sort, but instead of shifting 
+/// elements, it moves them to their correct position through a series of swaps, 
+/// stepping backward whenever a swap is performed.
 ///
-/// # Performance
+/// ## Complexity Analysis
 ///
-/// * **Time Complexity**: $O(n^2)$ (worst and average), $O(n)$ (best).
-/// * **Space Complexity**: $O(1)$.
-/// * **Stability**: This implementation is **stable**.
+/// | Metric | Complexity | Note |
+/// | :--- | :--- | :--- |
+/// | **Best Time** | $O(n)$ | Occurs when the data is already sorted. |
+/// | **Average Time** | $O(n^2)$ | Standard quadratic time for random data. |
+/// | **Worst Time** | $O(n^2)$ | Occurs when the slice is sorted in reverse. |
+/// | **Space Complexity** | $O(1)$ | Performs swaps in-place without extra memory. |
 ///
-/// # Examples
+/// ## Properties
+/// * **Stability:** ✅ **Stable**. It preserves the relative order of equal keys.
+/// * **Adaptive:** Yes. It finishes in linear time for sorted or nearly-sorted input.
+/// * **In-place:** Yes. Only requires a single index variable for navigation.
 ///
-/// ```
+/// ## Example
+/// ```rust
 /// use my_collections::sort::gnome_sort;
 ///
 /// let mut numbers = [4, 2, 5, 1, 3];
 /// gnome_sort(&mut numbers);
+///
 /// assert_eq!(numbers, [1, 2, 3, 4, 5]);
 /// ```
 pub fn gnome_sort<T: PartialOrd>(array: &mut [T]) {

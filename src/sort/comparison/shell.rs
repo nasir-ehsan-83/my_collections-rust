@@ -1,27 +1,31 @@
-/// Sorts a slice in-place using the shell sort algorithm.
+/// # Shell Sort
 ///
-/// Shell sort is an optimization of insertion sort that allows the exchange of 
-/// items that are far apart. The algorithm uses a sequence of gaps to create 
-/// sub-lists of elements, which are then individually sorted using insertion sort.
+/// An optimization of insertion sort that allows the exchange of elements far apart. 
+/// It uses a decreasing gap sequence to sort sub-lists, effectively moving 
+/// "out-of-place" elements to their destinations faster than standard quadratic sorts.
 ///
-/// # Performance
+/// ## Complexity Analysis
 ///
-/// * **Time Complexity**: $O(n^2)$ (worst case), $O(n \log^2 n)$ (average case depending on gap sequence).
-/// * **Space Complexity**: $O(1)$ (in-place).
-/// * **Stability**: This implementation is unstable (may change the relative order of equal elements).
+/// | Metric | Complexity | Note |
+/// | :--- | :--- | :--- |
+/// | **Best Time** | $O(n \log n)$ | Typical for already partially sorted data. |
+/// | **Average Time** | $O(n \log^2 n)$ | Highly dependent on the gap sequence used. |
+/// | **Worst Time** | $O(n^2)$ | The upper bound for most standard gap sequences. |
+/// | **Space Complexity** | $O(1)$ | Performs swaps in-place with zero extra memory. |
 ///
-/// # Examples
+/// ## Properties
+/// * **Stability:** ❌ **Unstable**. Long-range swaps can reorder equal elements.
+/// * **Adaptive:** Yes. Performance scales with the initial order of the data.
+/// * **In-place:** Yes. Operates directly on the input slice.
 ///
-/// ```
+/// ## Example
+/// ```rust
 /// use my_collections::sort::shell_sort;
 ///
 /// let mut numbers = [4, 2, 5, 1, 3];
 /// shell_sort(&mut numbers);
-/// assert_eq!(numbers, [1, 2, 3, 4, 5]);
 ///
-/// let mut strings = ["banana", "apple", "cherry"];
-/// shell_sort(&mut strings);
-/// assert_eq!(strings, ["apple", "banana", "cherry"]);
+/// assert_eq!(numbers, [1, 2, 3, 4, 5]);
 /// ```
 pub fn shell_sort<T: PartialOrd>(array: &mut [T]) {
     let len = array.len();

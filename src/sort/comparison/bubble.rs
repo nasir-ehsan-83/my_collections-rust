@@ -1,28 +1,31 @@
-/// Sorts a slice in-place using the bubble sort algorithm.
+///# Bubble Sort
 ///
-/// Bubble sort is a simple sorting algorithm that repeatedly steps through the list,
-/// compares adjacent elements and swaps them if they are in the wrong order. 
-/// The pass through the list is repeated until the list is sorted.
+///An in-place sorting algorithm with an early-exit optimization. It’s designed to be simple and memory-efficient, specifically for small collections or nearly-sorted data.
 ///
-/// # Performance
+///## Complexity Analysis
 ///
-/// * **Time Complexity**: $O(n^2)$ (worst/average case), $O(n)$ (best case/already sorted).
-/// * **Space Complexity**: $O(1)$ (in-place).
-/// * **Stability**: This implementation is stable (preserves the relative order of equal elements).
 ///
-/// # Examples
+///| Metric | Complexity | Note |
+///| :--- | :--- | :--- |
+///| **Best Time** | $O(n)$ | Triggered when the slice is already sorted. |
+///| **Average Time** | $O(n^2)$ | Expected for random data. |
+///| **Worst Time** | $O(n^2)$ | Occurs when the data is in reverse order. |
+///| **Space Complexity** | $O(1)$ | Zero extra allocations (in-place). |
 ///
-/// ```
-/// use my_collections::sort::bubble_sort;
+///## Properties
+///*   **Stability:** ✅ **Stable**. Does not swap equal elements.
+///*   **Adaptive:** Yes. Returns early if no swaps occur in a pass.
+///*   **In-place:** Yes. Only requires a few temporary variables for swapping.
 ///
-/// let mut numbers = [4, 2, 5, 1, 3];
-/// bubble_sort(&mut numbers);
-/// assert_eq!(numbers, [1, 2, 3, 4, 5]);
+///## Example
+///```
+///use my_collections::sort::bubble_sort;
 ///
-/// let mut strings = ["banana", "apple", "cherry"];
-/// bubble_sort(&mut strings);
-/// assert_eq!(strings, ["apple", "banana", "cherry"]);
-/// ```
+///let mut data = [5, 2, 8, 1, 9];
+///bubble_sort(&mut data);
+///
+///assert_eq!(data, [1, 2, 5, 8, 9]);
+///```
 pub fn bubble_sort<T: PartialOrd>(array: &mut [T]) {
     let len = array.len();
     if len < 2 {

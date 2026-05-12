@@ -1,28 +1,33 @@
-/// Sorts a slice in-place using the heap sort algorithm.
+/// # Heap Sort
 ///
-/// Heap sort visualizes the array as a binary heap. It first builds a max-heap, 
-/// then repeatedly extracts the maximum element and moves it to the end of the 
-/// array, rebuilding the heap with the remaining elements.
+/// An efficient, in-place sorting algorithm that visualizes the array as a binary heap. 
+/// It builds a max-heap and repeatedly extracts the maximum element to the end of 
+/// the slice, maintaining $O(n \log n)$ performance across all cases.
 ///
-/// # Performance
+/// ## Complexity Analysis
 ///
-/// * **Time Complexity**: $O(n \log n)$ (all cases).
-/// * **Space Complexity**: $O(1)$ (in-place).
-/// * **Stability**: This implementation is unstable.
+/// | Metric | Complexity | Note |
+/// | :--- | :--- | :--- |
+/// | **Best Time** | $O(n \log n)$ | Consistently fast even in the best case. |
+/// | **Average Time** | $O(n \log n)$ | Very reliable for random data distributions. |
+/// | **Worst Time** | $O(n \log n)$ | Guaranteed upper bound on performance. |
+/// | **Space Complexity** | $O(1)$ | Performs swaps in-place without extra allocations. |
 ///
-/// # Examples
+/// ## Properties
+/// * **Stability:** ❌ **Unstable**. Does not preserve the order of equal elements.
+/// * **Adaptive:** No. The heap construction and extraction steps are fixed.
+/// * **In-place:** Yes. Transforms the input slice into a heap structure.
 ///
-/// ```
+/// ## Example
+/// ```rust
 /// use my_collections::sort::heap_sort;
 ///
 /// let mut numbers = [4, 2, 5, 1, 3];
 /// heap_sort(&mut numbers);
-/// assert_eq!(numbers, [1, 2, 3, 4, 5]);
 ///
-/// let mut strings = ["banana", "apple", "cherry"];
-/// heap_sort(&mut strings);
-/// assert_eq!(strings, ["apple", "banana", "cherry"]);
+/// assert_eq!(numbers, [1, 2, 3, 4, 5]);
 /// ```
+
 pub fn heap_sort<T: PartialOrd>(array: &mut [T]) {
     let len = array.len();
     if len < 2 {

@@ -1,21 +1,29 @@
-/// Sorts a slice in-place using the cocktail shaker sort algorithm.
+/// # Cocktail Shaker Sort
 ///
-/// Cocktail shaker sort is a bidirectional bubble sort. It moves the largest
-/// element to the end and the smallest element to the beginning in each pass.
+/// A bidirectional bubble sort that moves the largest element to the end and the smallest 
+/// to the beginning in each pass. It effectively reduces the "turtle" problem in standard bubble sort.
 ///
-/// # Performance
+/// ## Complexity Analysis
 ///
-/// * **Time Complexity**: $O(n^2)$ (worst and average), $O(n)$ (best).
-/// * **Space Complexity**: $O(1)$.
-/// * **Stability**: This implementation is **stable**.
+/// | Metric | Complexity | Note |
+/// | :--- | :--- | :--- |
+/// | **Best Time** | $O(n)$ | Occurs if the slice is already sorted. |
+/// | **Average Time** | $O(n^2)$ | Typical performance for random shuffles. |
+/// | **Worst Time** | $O(n^2)$ | Occurs with reversed or highly unsorted data. |
+/// | **Space Complexity** | $O(1)$ | Constant space, performs swaps in-place. |
 ///
-/// # Examples
+/// ## Properties
+/// * **Stability:** ✅ **Stable**. Maintains the relative order of identical elements.
+/// * **Adaptive:** Yes. Terminates early if a pass completes without any swaps.
+/// * **In-place:** Yes. Operates directly on the input slice.
 ///
-/// ```
+/// ## Example
+/// ```rust
 /// use my_collections::sort::cocktail_shaker_sort;
 ///
 /// let mut numbers = [4, 2, 5, 1, 3];
 /// cocktail_shaker_sort(&mut numbers);
+///
 /// assert_eq!(numbers, [1, 2, 3, 4, 5]);
 /// ```
 pub fn cocktail_shaker_sort<T: PartialOrd>(array: &mut [T]) {

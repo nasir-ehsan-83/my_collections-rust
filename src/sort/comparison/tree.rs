@@ -50,29 +50,34 @@ impl<T: PartialOrd> Node<T> {
     }
 }
 
-/// Sorts a slice by building a Binary Search Tree (BST) and performing an in-order traversal.
+/// # Tree Sort
 ///
-/// Tree sort inserts all elements into a BST and then retrieves them in-order. 
-/// Note: Since a standard BST is used here, performance depends on the input order.
+/// A sorting algorithm that builds a Binary Search Tree (BST) from the input elements 
+/// and retrieves them in sorted order via in-order traversal. Performance is 
+/// highly dependent on the balance of the underlying tree.
 ///
-/// # Performance
+/// ## Complexity Analysis
 ///
-/// * **Time Complexity**: $O(n^2)$ (worst case - skewed tree), $O(n \log n)$ (average case).
-/// * **Space Complexity**: $O(n)$ (requires additional nodes).
-/// * **Stability**: This implementation is stable.
+/// | Metric | Complexity | Note |
+/// | :--- | :--- | :--- |
+/// | **Best Time** | $O(n \log n)$ | Achieved when the tree is perfectly balanced. |
+/// | **Average Time** | $O(n \log n)$ | Typical for random data distributions. |
+/// | **Worst Time** | $O(n^2)$ | Occurs when the tree is skewed (sorted input). |
+/// | **Space Complexity** | $O(n)$ | Requires extra memory for the tree nodes. |
 ///
-/// # Examples
+/// ## Properties
+/// * **Stability:** ✅ **Stable**. Preserves the relative order of equal elements.
+/// * **Adaptive:** No. Building the tree follows a fixed insertion process.
+/// * **In-place:** ❌ **No**. Requires additional heap allocations for nodes.
 ///
-/// ```
+/// ## Example
+/// ```rust
 /// use my_collections::sort::tree_sort;
 ///
-/// let mut numbers = [4, 2, 5, 1, 3];
+/// let mut numbers =;
 /// tree_sort(&mut numbers);
-/// assert_eq!(numbers, [1, 2, 3, 4, 5]);
 ///
-/// let mut strings = ["banana", "apple", "cherry"];
-/// tree_sort(&mut strings);
-/// assert_eq!(strings, ["apple", "banana", "cherry"]);
+/// assert_eq!(numbers,);
 /// ```
 pub fn tree_sort<T: PartialOrd + Clone>(array: &mut [T]) {
     let len = array.len();

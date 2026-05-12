@@ -1,28 +1,31 @@
-/// Sorts a slice in-place using the selection sort algorithm.
+/// # Selection Sort
 ///
-/// Selection sort divides the input list into two parts: a sorted sublist of items 
-/// built up from left to right and a sublist of the remaining unsorted items. 
-/// It repeatedly finds the smallest element from the unsorted part and 
-/// swaps it with the leftmost unsorted element.
+/// A simple comparison-based algorithm that divides the slice into a sorted and 
+/// an unsorted part. It repeatedly selects the smallest element from the unsorted 
+/// section and swaps it into its correct position.
 ///
-/// # Performance
+/// ## Complexity Analysis
 ///
-/// * **Time Complexity**: $O(n^2)$ (all cases: best, average, and worst).
-/// * **Space Complexity**: $O(1)$ (in-place).
-/// * **Stability**: This implementation is **unstable** (may change the relative order of equal elements due to long-distance swaps).
+/// | Metric | Complexity | Note |
+/// | :--- | :--- | :--- |
+/// | **Best Time** | $O(n^2)$ | Always scans the remaining unsorted part. |
+/// | **Average Time** | $O(n^2)$ | Consistent performance regardless of order. |
+/// | **Worst Time** | $O(n^2)$ | Same number of comparisons as the average case. |
+/// | **Space Complexity** | $O(1)$ | Zero extra allocations (in-place). |
 ///
-/// # Examples
+/// ## Properties
+/// * **Stability:** ❌ **Unstable**. Long-distance swaps may reorder equal keys.
+/// * **Adaptive:** No. It performs the same number of comparisons for any input.
+/// * **In-place:** Yes. Only requires a constant amount of extra memory.
 ///
-/// ```
+/// ## Example
+/// ```rust
 /// use my_collections::sort::selection_sort;
 ///
-/// let mut numbers = [4, 2, 5, 1, 3];
-/// selection_sort(&mut numbers);
-/// assert_eq!(numbers, [1, 2, 3, 4, 5]);
+/// let mut data = [4, 2, 5, 1, 3];
+/// selection_sort(&mut data);
 ///
-/// let mut strings = ["banana", "apple", "cherry"];
-/// selection_sort(&mut strings);
-/// assert_eq!(strings, ["apple", "banana", "cherry"]);
+/// assert_eq!(data, [1, 2, 3, 4, 5]);
 /// ```
 pub fn selection_sort<T: PartialOrd>(array: &mut [T]) {
     let len = array.len();

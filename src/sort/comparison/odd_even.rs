@@ -1,21 +1,30 @@
-/// Sorts a slice in-place using the odd-even sort algorithm.
+/// # Odd-Even Sort (Brick Sort)
 ///
-/// Odd-even sort (brick sort) alternates between comparing odd-indexed
-/// and even-indexed pairs until the array is sorted.
+/// A parallel-friendly sorting algorithm that alternates between comparing odd-indexed 
+/// and even-indexed adjacent pairs. It is functionally similar to bubble sort but 
+/// structured in two distinct phases.
 ///
-/// # Performance
+/// ## Complexity Analysis
 ///
-/// * **Time Complexity**: $O(n^2)$ (worst and average), $O(n)$ (best).
-/// * **Space Complexity**: $O(1)$.
-/// * **Stability**: This implementation is **stable**.
+/// | Metric | Complexity | Note |
+/// | :--- | :--- | :--- |
+/// | **Best Time** | $O(n)$ | Achieved if the slice is already sorted. |
+/// | **Average Time** | $O(n^2)$ | Standard performance for random data. |
+/// | **Worst Time** | $O(n^2)$ | Occurs when the data is in reverse order. |
+/// | **Space Complexity** | $O(1)$ | Constant space, performs swaps in-place. |
 ///
-/// # Examples
+/// ## Properties
+/// * **Stability:** ✅ **Stable**. Preserves the relative order of equal elements.
+/// * **Adaptive:** Yes. Terminates early if no swaps occur in a full cycle.
+/// * **In-place:** Yes. Operates directly on the input slice.
 ///
-/// ```
+/// ## Example
+/// ```rust
 /// use my_collections::sort::odd_even_sort;
 ///
 /// let mut numbers = [4, 2, 5, 1, 3];
 /// odd_even_sort(&mut numbers);
+///
 /// assert_eq!(numbers, [1, 2, 3, 4, 5]);
 /// ```
 pub fn odd_even_sort<T: PartialOrd>(array: &mut [T]) {
