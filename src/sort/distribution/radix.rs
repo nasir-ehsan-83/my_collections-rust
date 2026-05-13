@@ -1,21 +1,32 @@
-/// Sorts a slice of non-negative integers using the radix sort algorithm (LSD).
+/// # Radix Sort (LSD)
 ///
-/// Radix sort avoids comparison by creating and distributing elements into buckets 
-/// according to their radix. This version uses Least Significant Digit (LSD).
+/// A non-comparative sorting algorithm that sorts non-negative integers by processing
+/// individual digits. This implementation uses the Least Significant Digit (LSD) approach,
+/// sorting from the rightmost digit to the leftmost digit.
 ///
-/// # Performance
+/// ## Complexity Analysis
 ///
-/// * **Time Complexity**: $O(d \cdot (n + k))$, where $d$ is number of digits and $k$ is the radix (base).
-/// * **Space Complexity**: $O(n + k)$.
-/// * **Stability**: This implementation is stable.
+/// | Metric | Complexity | Note |
+/// | :--- | :--- | :--- |
+/// | **Best Time** | $O(d \cdot (n + k))$ | Performance is consistent across all data distributions. |
+/// | **Average Time** | $O(d \cdot (n + k))$ | Depends heavily on the number of digits $d$ and the radix base $k$. |
+/// | **Worst Time** | $O(d \cdot (n + k))$ | No worst-case degradation; execution path remains identical. |
+/// | **Space Complexity** | $O(n + k)$ | Requires extra memory for bucket allocation and temporary storage. |
 ///
-/// # Examples
+/// ## Properties
 ///
-/// ```
+/// * **Stability:** ✅ **Stable**. Preserves the relative order of equal elements across digit passes.
+/// * **Adaptive:** No. The algorithm performs a fixed number of passes based on the maximum key size.
+/// * **In-place:** ❌ **No**. Requires helper arrays to distribute elements during each pass.
+///
+/// ## Example
+///
+/// ```rust
 /// use my_collections::sort::radix_sort;
 ///
 /// let mut numbers = [170, 45, 75, 90, 802, 24, 2, 66];
 /// radix_sort(&mut numbers);
+///
 /// assert_eq!(numbers, [2, 24, 45, 66, 75, 90, 170, 802]);
 /// ```
 pub fn radix_sort(array: &mut [usize]) {

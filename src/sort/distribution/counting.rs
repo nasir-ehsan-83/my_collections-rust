@@ -18,31 +18,39 @@ impl CountingSortable for usize {
         index
     }
 }
-
-/// Sorts a slice in-place using the counting sort algorithm.
+/// # Counting Sort
 ///
-/// Counting sort works by counting occurrences of each value and reconstructing
-/// the array using those counts.
+/// An integer sorting algorithm that works by counting the occurrences of each
+/// unique value and reconstructing the slice in-place using those counts.
 ///
 /// This implementation is generic over types that implement `CountingSortable`.
 ///
-/// # Performance
+/// ## Complexity Analysis
 ///
-/// * **Time Complexity**: O(n + k)
-/// * **Space Complexity**: O(k)
-/// * **Stability**: Unstable (can be made stable with extra memory)
+/// | Metric | Complexity | Note |
+/// | :--- | :--- | :--- |
+/// | **Best Time** | $O(n + k)$ | Constant time relative to the element count and range. |
+/// | **Average Time** | $O(n + k)$ | Efficient when the value range $k$ is not significantly larger than $n$. |
+/// | **Worst Time** | $O(n + k)$ | Performance remains uniform regardless of data distribution. |
+/// | **Space Complexity** | $O(k)$ | Requires temporary memory proportional to the value range $k$. |
 ///
-/// where:
-/// - n = number of elements
-/// - k = max value range
+/// ## Properties
 ///
-/// # Examples
+/// * **Stability:** ❌ **Unstable**. This specific in-place implementation does not preserve relative order.
+/// * **Adaptive:** No. The frequency counting loop runs for all input structures.
+/// * **In-place:** ✅ **Yes**. Modifies the input slice directly without allocating an output array.
 ///
-/// ```
+/// ## Example
+///
+/// ```rust
+/// use my_collections::sort::distribution::counting_sort;
+///
 /// let mut numbers = [4usize, 2, 2, 8, 3, 3, 1];
 /// counting_sort(&mut numbers);
+///
 /// assert_eq!(numbers, [1, 2, 2, 3, 3, 4, 8]);
 /// ```
+
 pub fn counting_sort<T: CountingSortable>(array: &mut [T]) {
     if array.len() < 2 {
         return;
