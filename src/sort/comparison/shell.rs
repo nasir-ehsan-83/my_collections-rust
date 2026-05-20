@@ -14,9 +14,9 @@
 /// | **Space Complexity** | O(1) | Performs swaps in-place with zero extra memory. |
 ///
 /// ## Properties
-/// * **Stability:** ❌ **Unstable**. Long-range swaps can reorder equal elements.
-/// * **Adaptive:** Yes. Performance scales with the initial order of the data.
-/// * **In-place:** Yes. Operates directly on the input slice.
+/// * **Unstable:**. Long-range swaps can reorder equal elements.
+/// * **Adaptive:** Performance scales with the initial order of the data.
+/// * **In-place:** Operates directly on the input slice.
 ///
 /// ## Example
 /// ```rust

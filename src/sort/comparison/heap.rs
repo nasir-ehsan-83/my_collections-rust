@@ -14,9 +14,9 @@
 /// | **Space Complexity** | O(1) | Performs swaps in-place without extra allocations. |
 ///
 /// ## Properties
-/// * **Stability:** ❌ **Unstable**. Does not preserve the order of equal elements.
-/// * **Adaptive:** No. The heap construction and extraction steps are fixed.
-/// * **In-place:** Yes. Transforms the input slice into a heap structure.
+/// * **Unstable:**. Does not preserve the order of equal elements.
+/// * **Adaptive:** The heap construction and extraction steps are fixed.
+/// * **In-place:** Transforms the input slice into a heap structure.
 ///
 /// ## Example
 /// ```rust

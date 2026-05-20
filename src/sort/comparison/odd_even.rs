@@ -14,9 +14,9 @@
 /// | **Space Complexity** | O(1) | Constant space, performs swaps in-place. |
 ///
 /// ## Properties
-/// * **Stability:** ✅ **Stable**. Preserves the relative order of equal elements.
-/// * **Adaptive:** Yes. Terminates early if no swaps occur in a full cycle.
-/// * **In-place:** Yes. Operates directly on the input slice.
+/// * **Stable:** Preserves the relative order of equal elements.
+/// * **Adaptive:** Terminates early if no swaps occur in a full cycle.
+/// * **In-place:** Operates directly on the input slice.
 ///
 /// ## Example
 /// ```rust

@@ -8,14 +8,14 @@
 ///| Metric | Complexity | Note |
 ///| :--- | :--- | :--- |
 ///| **Best Time** | O(n) | Triggered when the slice is already sorted. |
-///| **Average Time** | O(n²)$ | Expected for random data. |
+///| **Average Time** | O(n²) | Expected for random data. |
 ///| **Worst Time** | O(n²) | Occurs when the data is in reverse order. |
 ///| **Space Complexity** | O(1) | Zero extra allocations (in-place). |
 ///
 ///## Properties
-///*   **Stability:** ✅ **Stable**. Does not swap equal elements.
-///*   **Adaptive:** Yes. Returns early if no swaps occur in a pass.
-///*   **In-place:** Yes. Only requires a few temporary variables for swapping.
+///*   **Stable:** Does not swap equal elements.
+///*   **Adaptive:** Returns early if no swaps occur in a pass.
+///*   **In-place:** Only requires a few temporary variables for swapping.
 ///
 ///## Example
 ///```

@@ -15,9 +15,9 @@
 ///
 /// ## Properties
 ///
-/// * **Stability:** ✅ **Stable**. Depends on the underlying sorting algorithm used for buckets.
-/// * **Adaptive:** No. The bucket allocation process remains identical for all distributions.
-/// * **In-place:** ❌ **No**. Requires additional heap allocations for the buckets.
+/// * **Stable:** Depends on the underlying sorting algorithm used for buckets.
+/// * **Not-adaptive:** The bucket allocation process remains identical for all distributions.
+/// * **Not-In-place:** Requires additional heap allocations for the buckets.
 ///
 /// ## Example
 ///

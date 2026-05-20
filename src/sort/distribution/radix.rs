@@ -15,9 +15,9 @@
 ///
 /// ## Properties
 ///
-/// * **Stability:** ✅ **Stable**. Preserves the relative order of equal elements across digit passes.
-/// * **Adaptive:** No. The algorithm performs a fixed number of passes based on the maximum key size.
-/// * **In-place:** ❌ **No**. Requires helper arrays to distribute elements during each pass.
+/// * **Stable:**. Preserves the relative order of equal elements across digit passes.
+/// * **Not-adaptive:** The algorithm performs a fixed number of passes based on the maximum key size.
+/// * **Not-in-place:** Requires helper arrays to distribute elements during each pass.
 ///
 /// ## Example
 ///

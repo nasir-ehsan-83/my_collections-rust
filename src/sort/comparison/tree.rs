@@ -66,9 +66,9 @@ impl<T: PartialOrd> Node<T> {
 /// | **Space Complexity** | O(n) | Requires extra memory for the tree nodes. |
 ///
 /// ## Properties
-/// * **Stability:** ✅ **Stable**. Preserves the relative order of equal elements.
-/// * **Adaptive:** No. Building the tree follows a fixed insertion process.
-/// * **In-place:** ❌ **No**. Requires additional heap allocations for nodes.
+/// * **Stable:** Preserves the relative order of equal elements.
+/// * **Not-adaptive:** Building the tree follows a fixed insertion process.
+/// * **Not-in-place:** Requires additional heap allocations for nodes.
 ///
 /// ## Example
 /// ```rust

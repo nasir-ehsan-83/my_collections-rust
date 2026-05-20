@@ -14,9 +14,9 @@
 /// | **Space Complexity** | O(1) | Zero extra allocations (in-place). |
 ///
 /// ## Properties
-/// * **Stability:** ✅ **Stable**. Preserves the original order of equal elements.
-/// * **Adaptive:** Yes. Performance improves as the data becomes more sorted.
-/// * **In-place:** Yes. Only requires a small, constant amount of memory.
+/// * **Stable:**. Preserves the original order of equal elements.
+/// * **Adaptive:** Performance improves as the data becomes more sorted.
+/// * **In-place:** Only requires a small, constant amount of memory.
 ///
 /// ## Example
 /// ```rust

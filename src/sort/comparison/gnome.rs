@@ -14,9 +14,9 @@
 /// | **Space Complexity** | O(1) | Performs swaps in-place without extra memory. |
 ///
 /// ## Properties
-/// * **Stability:** ✅ **Stable**. It preserves the relative order of equal keys.
-/// * **Adaptive:** Yes. It finishes in linear time for sorted or nearly-sorted input.
-/// * **In-place:** Yes. Only requires a single index variable for navigation.
+/// * **Stable:** It preserves the relative order of equal keys.
+/// * **Adaptive:** It finishes in linear time for sorted or nearly-sorted input.
+/// * **In-place:** Only requires a single index variable for navigation.
 ///
 /// ## Example
 /// ```rust

@@ -14,9 +14,9 @@
 /// | **Space Complexity** | O(1) | Zero extra allocations (in-place). |
 ///
 /// ## Properties
-/// * **Stability:** ❌ **Unstable**. Long-distance swaps may reorder equal keys.
-/// * **Adaptive:** No. It performs the same number of comparisons for any input.
-/// * **In-place:** Yes. Only requires a constant amount of extra memory.
+/// * **Unstable:**. Long-distance swaps may reorder equal keys.
+/// * **Not-adaptive:** It performs the same number of comparisons for any input.
+/// * **In-place:** Only requires a constant amount of extra memory.
 ///
 /// ## Example
 /// ```rust

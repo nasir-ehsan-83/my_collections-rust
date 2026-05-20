@@ -14,9 +14,9 @@
 /// | **Space Complexity** | O(1) | Zero extra allocations (in-place). |
 ///
 /// ## Properties
-/// * **Stability:** ❌ **Unstable**. Does not guarantee order of equal elements.
-/// * **Adaptive:** No. The gap sequence is predetermined by the shrink factor.
-/// * **In-place:** Yes. Operates directly on the input slice.
+/// * **Unstable:** Does not guarantee order of equal elements.
+/// * **Not-adaptive:** The gap sequence is predetermined by the shrink factor.
+/// * **In-place:** Operates directly on the input slice.
 ///
 /// ## Example
 /// ```rust

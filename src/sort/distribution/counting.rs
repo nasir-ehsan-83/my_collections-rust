@@ -36,9 +36,9 @@ impl CountingSortable for usize {
 ///
 /// ## Properties
 ///
-/// * **Stability:** ❌ **Unstable**. This specific in-place implementation does not preserve relative order.
-/// * **Adaptive:** No. The frequency counting loop runs for all input structures.
-/// * **In-place:** ✅ **Yes**. Modifies the input slice directly without allocating an output array.
+/// * **Unstable**. This specific in-place implementation does not preserve relative order.
+/// * **Not-adaptive:** The frequency counting loop runs for all input structures.
+/// * **In-place:** Modifies the input slice directly without allocating an output array.
 ///
 /// ## Example
 ///
