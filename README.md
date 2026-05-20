@@ -1,4 +1,4 @@
-# 🦀 my_collections-rust
+# 🦀 mycollections-rust
 
 ![Rust](https://img.shields.io/badge/Rust-Programming-orange)
 ![Status](https://img.shields.io/badge/status-in--progress-yellow)
@@ -11,7 +11,7 @@ This project is designed to combine **clean, idiomatic Rust code** with **deep c
 
 ## 🎯 Project Overview
 
-`my_collections-rust` aims to become a comprehensive reference for core computer science concepts.
+`mycollections-rust` aims to become a comprehensive reference for core computer science concepts.
 
 The project focuses on:
 
@@ -48,11 +48,11 @@ src/
 - [x] Bubble Sort  
 - [x] Selection Sort  
 - [x] Insertion Sort  
-- [ ] Merge Sort *(in progress)*  
-- [ ] Quick Sort  
-- [ ] Heap Sort  
-- [ ] Counting Sort *(next step)*  
-- [ ] Radix Sort  
+- [x] Merge Sort   
+- [x] Quick Sort  
+- [x] Heap Sort  
+- [x] Counting Sort 
+- [x] Radix Sort  
 
 ---
 
@@ -98,7 +98,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://rustup.rs | sh
 ### Installation
 
 ```bash
-git clone https://github.com/nasir-ehsan-83/my_collections-rust
+git clone https://github.com/nasir-ehsan-83/mycollections-rust
 cd my_collections-rust
 ```
 
