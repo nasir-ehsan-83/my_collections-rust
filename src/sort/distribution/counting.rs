@@ -43,7 +43,7 @@ impl CountingSortable for usize {
 /// ## Example
 ///
 /// ```rust
-/// use mycollections::sort::distribution::counting_sort;
+/// use mycollections::sort::counting_sort;
 ///
 /// let mut numbers = [4usize, 2, 2, 8, 3, 3, 1];
 /// counting_sort(&mut numbers);

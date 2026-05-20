@@ -22,7 +22,7 @@
 /// ## Example
 ///
 /// ```rust
-/// use mycollections::sort::distribution::bucket_sort;
+/// use mycollections::sort::bucket_sort;
 ///
 /// let mut numbers = [0.42, 0.32, 0.33, 0.52, 0.37, 0.47, 0.51];
 /// bucket_sort(&mut numbers);
