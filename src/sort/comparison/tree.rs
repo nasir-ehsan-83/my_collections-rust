@@ -60,10 +60,10 @@ impl<T: PartialOrd> Node<T> {
 ///
 /// | Metric | Complexity | Note |
 /// | :--- | :--- | :--- |
-/// | **Best Time** | $O(n \log n)$ | Achieved when the tree is perfectly balanced. |
-/// | **Average Time** | $O(n \log n)$ | Typical for random data distributions. |
-/// | **Worst Time** | $O(n^2)$ | Occurs when the tree is skewed (sorted input). |
-/// | **Space Complexity** | $O(n)$ | Requires extra memory for the tree nodes. |
+/// | **Best Time** | O(n log n) | Achieved when the tree is perfectly balanced. |
+/// | **Average Time** | O(n log n) | Typical for random data distributions. |
+/// | **Worst Time** | O(n²) | Occurs when the tree is skewed (sorted input). |
+/// | **Space Complexity** | O(n) | Requires extra memory for the tree nodes. |
 ///
 /// ## Properties
 /// * **Stability:** ✅ **Stable**. Preserves the relative order of equal elements.
@@ -72,7 +72,7 @@ impl<T: PartialOrd> Node<T> {
 ///
 /// ## Example
 /// ```rust
-/// use my_collections::sort::tree_sort;
+/// use mycollections::sort::tree_sort;
 ///
 /// let mut numbers =;
 /// tree_sort(&mut numbers);

@@ -8,10 +8,10 @@
 ///
 /// | Metric | Complexity | Note |
 /// | :--- | :--- | :--- |
-/// | **Best Time** | $O(n)$ | Occurs when the data is already sorted. |
-/// | **Average Time** | $O(n^2)$ | Standard quadratic time for random data. |
-/// | **Worst Time** | $O(n^2)$ | Occurs when the slice is sorted in reverse. |
-/// | **Space Complexity** | $O(1)$ | Performs swaps in-place without extra memory. |
+/// | **Best Time** | O(n) | Occurs when the data is already sorted. |
+/// | **Average Time** | O(n²) | Standard quadratic time for random data. |
+/// | **Worst Time** | O(n²) | Occurs when the slice is sorted in reverse. |
+/// | **Space Complexity** | O(1) | Performs swaps in-place without extra memory. |
 ///
 /// ## Properties
 /// * **Stability:** ✅ **Stable**. It preserves the relative order of equal keys.
@@ -20,7 +20,7 @@
 ///
 /// ## Example
 /// ```rust
-/// use my_collections::sort::gnome_sort;
+/// use mycollections::sort::gnome_sort;
 ///
 /// let mut numbers = [4, 2, 5, 1, 3];
 /// gnome_sort(&mut numbers);

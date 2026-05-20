@@ -7,10 +7,10 @@
 ///
 ///| Metric | Complexity | Note |
 ///| :--- | :--- | :--- |
-///| **Best Time** | $O(n)$ | Triggered when the slice is already sorted. |
-///| **Average Time** | $O(n^2)$ | Expected for random data. |
-///| **Worst Time** | $O(n^2)$ | Occurs when the data is in reverse order. |
-///| **Space Complexity** | $O(1)$ | Zero extra allocations (in-place). |
+///| **Best Time** | O(n) | Triggered when the slice is already sorted. |
+///| **Average Time** | O(n²)$ | Expected for random data. |
+///| **Worst Time** | O(n²) | Occurs when the data is in reverse order. |
+///| **Space Complexity** | O(1) | Zero extra allocations (in-place). |
 ///
 ///## Properties
 ///*   **Stability:** ✅ **Stable**. Does not swap equal elements.
@@ -19,7 +19,7 @@
 ///
 ///## Example
 ///```
-///use my_collections::sort::bubble_sort;
+///use mycollections::sort::bubble_sort;
 ///
 ///let mut data = [5, 2, 8, 1, 9];
 ///bubble_sort(&mut data);

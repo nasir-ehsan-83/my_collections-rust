@@ -8,10 +8,10 @@
 ///
 /// | Metric | Complexity | Note |
 /// | :--- | :--- | :--- |
-/// | **Best Time** | $O(n)$ | Achieved if the slice is already sorted. |
-/// | **Average Time** | $O(n^2)$ | Standard performance for random data. |
-/// | **Worst Time** | $O(n^2)$ | Occurs when the data is in reverse order. |
-/// | **Space Complexity** | $O(1)$ | Constant space, performs swaps in-place. |
+/// | **Best Time** | O(n) | Achieved if the slice is already sorted. |
+/// | **Average Time** | O(n²) | Standard performance for random data. |
+/// | **Worst Time** | O(n²) | Occurs when the data is in reverse order. |
+/// | **Space Complexity** | O(1) | Constant space, performs swaps in-place. |
 ///
 /// ## Properties
 /// * **Stability:** ✅ **Stable**. Preserves the relative order of equal elements.
@@ -20,7 +20,7 @@
 ///
 /// ## Example
 /// ```rust
-/// use my_collections::sort::odd_even_sort;
+/// use mycollections::sort::odd_even_sort;
 ///
 /// let mut numbers = [4, 2, 5, 1, 3];
 /// odd_even_sort(&mut numbers);

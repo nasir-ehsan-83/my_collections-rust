@@ -7,10 +7,10 @@
 ///
 /// | Metric | Complexity | Note |
 /// | :--- | :--- | :--- |
-/// | **Best Time** | $O(n)$ | Occurs if the slice is already sorted. |
-/// | **Average Time** | $O(n^2)$ | Typical performance for random shuffles. |
-/// | **Worst Time** | $O(n^2)$ | Occurs with reversed or highly unsorted data. |
-/// | **Space Complexity** | $O(1)$ | Constant space, performs swaps in-place. |
+/// | **Best Time** | O(n) | Occurs if the slice is already sorted. |
+/// | **Average Time** | O(n²) | Typical performance for random shuffles. |
+/// | **Worst Time** | O(n²) | Occurs with reversed or highly unsorted data. |
+/// | **Space Complexity** | O(1) | Constant space, performs swaps in-place. |
 ///
 /// ## Properties
 /// * **Stability:** ✅ **Stable**. Maintains the relative order of identical elements.
@@ -19,7 +19,7 @@
 ///
 /// ## Example
 /// ```rust
-/// use my_collections::sort::cocktail_shaker_sort;
+/// use mycollections::sort::cocktail_shaker_sort;
 ///
 /// let mut numbers = [4, 2, 5, 1, 3];
 /// cocktail_shaker_sort(&mut numbers);

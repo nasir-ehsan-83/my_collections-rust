@@ -1,17 +1,17 @@
 /// # Bucket Sort
 ///
 /// A distribution-based sorting algorithm that partitions a slice of floats
-/// in the range `[0, 1)` into a finite number of buckets. Each bucket is
+/// in the range `[0, 1]` into a finite number of buckets. Each bucket is
 /// then sorted individually before merging.
 ///
 /// ## Complexity Analysis
-///
+///O(n²)
 /// | Metric | Complexity | Note |
 /// | :--- | :--- | :--- |
-/// | **Best Time** | $O(n + k)$ | Elements are uniformly distributed across buckets. |
-/// | **Average Time** | $O(n + k)$ | Linear time when input is uniformly distributed. |
-/// | **Worst Time** | $O(n^2)$ | All elements cluster into a single bucket. |
-/// | **Space Complexity** | $O(n + k)$ | Extra memory needed for $k$ buckets holding $n$ items. |
+/// | **Best Time** | O(n + k) | Elements are uniformly distributed across buckets. |
+/// | **Average Time** | O(n + k) | Linear time when input is uniformly distributed. |
+/// | **Worst Time** | O(n²) | All elements cluster into a single bucket. |
+/// | **Space Complexity** | O(n + k) | Extra memory needed for k buckets holding n items. |
 ///
 /// ## Properties
 ///
@@ -22,7 +22,7 @@
 /// ## Example
 ///
 /// ```rust
-/// use my_collections::sort::distribution::bucket_sort;
+/// use mycollections::sort::distribution::bucket_sort;
 ///
 /// let mut numbers = [0.42, 0.32, 0.33, 0.52, 0.37, 0.47, 0.51];
 /// bucket_sort(&mut numbers);

@@ -29,10 +29,10 @@ impl CountingSortable for usize {
 ///
 /// | Metric | Complexity | Note |
 /// | :--- | :--- | :--- |
-/// | **Best Time** | $O(n + k)$ | Constant time relative to the element count and range. |
-/// | **Average Time** | $O(n + k)$ | Efficient when the value range $k$ is not significantly larger than $n$. |
-/// | **Worst Time** | $O(n + k)$ | Performance remains uniform regardless of data distribution. |
-/// | **Space Complexity** | $O(k)$ | Requires temporary memory proportional to the value range $k$. |
+/// | **Best Time** | O(n + k) | Constant time relative to the element count and range. |
+/// | **Average Time** | O(n + k) | Efficient when the value range $k$ is not significantly larger than $n$. |
+/// | **Worst Time** | O(n + k) | Performance remains uniform regardless of data distribution. |
+/// | **Space Complexity** | O(k) | Requires temporary memory proportional to the value range $k$. |
 ///
 /// ## Properties
 ///
@@ -43,7 +43,7 @@ impl CountingSortable for usize {
 /// ## Example
 ///
 /// ```rust
-/// use my_collections::sort::distribution::counting_sort;
+/// use mycollections::sort::distribution::counting_sort;
 ///
 /// let mut numbers = [4usize, 2, 2, 8, 3, 3, 1];
 /// counting_sort(&mut numbers);

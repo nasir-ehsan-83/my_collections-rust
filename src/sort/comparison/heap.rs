@@ -8,10 +8,10 @@
 ///
 /// | Metric | Complexity | Note |
 /// | :--- | :--- | :--- |
-/// | **Best Time** | $O(n \log n)$ | Consistently fast even in the best case. |
-/// | **Average Time** | $O(n \log n)$ | Very reliable for random data distributions. |
-/// | **Worst Time** | $O(n \log n)$ | Guaranteed upper bound on performance. |
-/// | **Space Complexity** | $O(1)$ | Performs swaps in-place without extra allocations. |
+/// | **Best Time** | O(n log n) | Consistently fast even in the best case. |
+/// | **Average Time** | O(n log n) | Very reliable for random data distributions. |
+/// | **Worst Time** | O(n log n) | Guaranteed upper bound on performance. |
+/// | **Space Complexity** | O(1) | Performs swaps in-place without extra allocations. |
 ///
 /// ## Properties
 /// * **Stability:** ❌ **Unstable**. Does not preserve the order of equal elements.
@@ -20,7 +20,7 @@
 ///
 /// ## Example
 /// ```rust
-/// use my_collections::sort::heap_sort;
+/// use mycollections::sort::heap_sort;
 ///
 /// let mut numbers = [4, 2, 5, 1, 3];
 /// heap_sort(&mut numbers);

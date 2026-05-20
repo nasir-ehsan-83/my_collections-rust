@@ -8,10 +8,10 @@
 ///
 /// | Metric | Complexity | Note |
 /// | :--- | :--- | :--- |
-/// | **Best Time** | $O(n)$ | Extremely efficient for nearly-sorted data. |
-/// | **Average Time** | $O(n^2)$ | Standard quadratic time for random data. |
-/// | **Worst Time** | $O(n^2)$ | Occurs when the slice is in reverse order. |
-/// | **Space Complexity** | $O(1)$ | Zero extra allocations (in-place). |
+/// | **Best Time** | O(n) | Extremely efficient for nearly-sorted data. |
+/// | **Average Time** | O(n²) | Standard quadratic time for random data. |
+/// | **Worst Time** | O(n²) | Occurs when the slice is in reverse order. |
+/// | **Space Complexity** | O(1) | Zero extra allocations (in-place). |
 ///
 /// ## Properties
 /// * **Stability:** ✅ **Stable**. Preserves the original order of equal elements.
@@ -20,7 +20,7 @@
 ///
 /// ## Example
 /// ```rust
-/// use my_collections::sort::insertion_sort;
+/// use mycollections::sort::insertion_sort;
 ///
 /// let mut data = [4, 2, 5, 1, 3];
 /// insertion_sort(&mut data);

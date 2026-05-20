@@ -11,7 +11,7 @@
 /// | **Best Time** | $O(d \cdot (n + k))$ | Performance is consistent across all data distributions. |
 /// | **Average Time** | $O(d \cdot (n + k))$ | Depends heavily on the number of digits $d$ and the radix base $k$. |
 /// | **Worst Time** | $O(d \cdot (n + k))$ | No worst-case degradation; execution path remains identical. |
-/// | **Space Complexity** | $O(n + k)$ | Requires extra memory for bucket allocation and temporary storage. |
+/// | **Space Complexity** | O(n + k) | Requires extra memory for bucket allocation and temporary storage. |
 ///
 /// ## Properties
 ///
@@ -22,7 +22,7 @@
 /// ## Example
 ///
 /// ```rust
-/// use my_collections::sort::radix_sort;
+/// use mycollections::sort::radix_sort;
 ///
 /// let mut numbers = [170, 45, 75, 90, 802, 24, 2, 66];
 /// radix_sort(&mut numbers);

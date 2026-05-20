@@ -8,10 +8,10 @@
 ///
 /// | Metric | Complexity | Note |
 /// | :--- | :--- | :--- |
-/// | **Best Time** | $O(n^2)$ | Always scans the remaining unsorted part. |
-/// | **Average Time** | $O(n^2)$ | Consistent performance regardless of order. |
-/// | **Worst Time** | $O(n^2)$ | Same number of comparisons as the average case. |
-/// | **Space Complexity** | $O(1)$ | Zero extra allocations (in-place). |
+/// | **Best Time** | O(n²) | Always scans the remaining unsorted part. |
+/// | **Average Time** | O(n²) | Consistent performance regardless of order. |
+/// | **Worst Time** | O(n²) | Same number of comparisons as the average case. |
+/// | **Space Complexity** | O(1) | Zero extra allocations (in-place). |
 ///
 /// ## Properties
 /// * **Stability:** ❌ **Unstable**. Long-distance swaps may reorder equal keys.

@@ -8,10 +8,10 @@
 ///
 /// | Metric | Complexity | Note |
 /// | :--- | :--- | :--- |
-/// | **Best Time** | $O(n \log n)$ | Typical for already partially sorted data. |
-/// | **Average Time** | $O(n \log^2 n)$ | Highly dependent on the gap sequence used. |
-/// | **Worst Time** | $O(n^2)$ | The upper bound for most standard gap sequences. |
-/// | **Space Complexity** | $O(1)$ | Performs swaps in-place with zero extra memory. |
+/// | **Best Time** | O(n log n) | Typical for already partially sorted data. |
+/// | **Average Time** | O(n log² n) | Highly dependent on the gap sequence used. |
+/// | **Worst Time** | O(n²) | The upper bound for most standard gap sequences. |
+/// | **Space Complexity** | O(1) | Performs swaps in-place with zero extra memory. |
 ///
 /// ## Properties
 /// * **Stability:** ❌ **Unstable**. Long-range swaps can reorder equal elements.
@@ -20,7 +20,7 @@
 ///
 /// ## Example
 /// ```rust
-/// use my_collections::sort::shell_sort;
+/// use mycollections::sort::shell_sort;
 ///
 /// let mut numbers = [4, 2, 5, 1, 3];
 /// shell_sort(&mut numbers);
