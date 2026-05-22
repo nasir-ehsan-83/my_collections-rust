@@ -1,19 +1,32 @@
-/// Sorts a slice in-place using the quick sort algorithm.
+/// # Quick Sort
 ///
-/// Quick sort selects a pivot element and partitions the array into elements
-/// less than the pivot and greater than the pivot, recursively sorting them.
+/// A **divide-and-conquer** sorting algorithm that partitions a slice into
+/// sub-arrays based on a pivot element. It recursively sorts the partitions
+/// by placing the pivot in its final sorted position.
 ///
-/// # Performance
+/// ## Complexity Analysis
 ///
-/// * **Time Complexity**: O(n log n) (average), O(n²) (worst case)
-/// * **Space Complexity**: O(log n)
-/// * **Stability**: Unstable
+/// | Metric | Complexity | Note |
+/// | :--- | :--- | :--- |
+/// | **Best Time** | O(n log n) | Occurs when the pivot consistently divides the slice in half. |
+/// | **Average Time** | O(n log n) | Highly efficient for random distributions. |
+/// | **Worst Time** | O(n²) | Occurs with poor pivot selection on sorted or reversed data. |
+/// | **Space Complexity** | O(log n) | Space used for the recursive call stack. |
 ///
-/// # Examples
+/// ## Properties
 ///
-/// ```
+/// * **Not-Stable:** The partitioning process does not preserve the order of equal elements.
+/// * **Not-adaptive:** Performance typically degrades on already sorted arrays (unless optimized).
+/// * **In-place:** Sorts the elements within the original slice using swaps.
+///
+/// ## Example
+///
+/// ```rust
+/// use mycollections::sort::quick_sort;
+///
 /// let mut numbers = [4, 2, 5, 1, 3];
 /// quick_sort(&mut numbers);
+///
 /// assert_eq!(numbers, [1, 2, 3, 4, 5]);
 /// ```
 pub fn quick_sort<T: Ord>(array: &mut [T]) {

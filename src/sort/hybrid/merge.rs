@@ -1,20 +1,32 @@
-/// Sorts a slice using the merge sort algorithm.
+/// # Merge Sort
 ///
-/// Merge sort divides the array into halves, recursively sorts them,
-/// and merges the sorted halves.
+/// A **divide-and-conquer** sorting algorithm that recursively partitions a slice
+/// into halves, sorts each half individually, and then merges them back together.
 ///
-/// # Performance
+/// ## Complexity Analysis
 ///
-/// * **Time Complexity**: O(n log n)
-/// * **Space Complexity**: O(n)
-/// * **Stability**: Stable
+/// | Metric | Complexity | Note |
+/// | :--- | :--- | :--- |
+/// | **Best Time** | O(n log n) | Always divides the array, regardless of order. |
+/// | **Average Time** | O(n log n) | Highly predictable and consistent performance. |
+/// | **Worst Time** | O(n log n) | Guaranteed performance even on worst-case inputs. |
+/// | **Space Complexity** | O(n) | Requires auxiliary space for the merging process. |
 ///
-/// # Examples
+/// ## Properties
 ///
-/// ```
-/// let mut numbers = [4, 2, 5, 1, 3];
+/// * **Stable:** Preserves the relative order of elements with equal values.
+/// * **Not-adaptive:** The number of comparisons remains the same for any input.
+/// * **Not-In-place:** Typically requires an additional buffer to merge elements.
+///
+/// ## Example
+///
+/// ```rust
+/// use mycollections::sort::merge_sort;
+///
+/// let mut numbers = [38, 27, 43, 3, 9, 82, 10];
 /// merge_sort(&mut numbers);
-/// assert_eq!(numbers, [1, 2, 3, 4, 5]);
+///
+/// assert_eq!(numbers, [3, 9, 10, 27, 38, 43, 82]);
 /// ```
 pub fn merge_sort<T: Ord + Clone + Copy>(array: &mut [T]) {
     let len = array.len();

@@ -1,14 +1,35 @@
 use super::merge::merge;
-
-/// Sorts a slice using a simplified TimSort algorithm.
+/// # Timsort
 ///
-/// Combines insertion sort for small runs and merge sort for merging.
+/// A **hybrid** sorting algorithm derived from merge sort and insertion sort.
+/// It identifies small ordered subsequences (runs) and merges them efficiently,
+/// making it highly effective for real-world data.
 ///
-/// # Performance
+/// ## Complexity Analysis
 ///
-/// * **Time Complexity**: O(n log n)
-/// * **Space Complexity**: O(n)
-/// * **Stability**: Stable
+/// | Metric | Complexity | Note |
+/// | :--- | :--- | :--- |
+/// | **Best Time** | O(n) | Linear time when the input is already sorted. |
+/// | **Average Time** | O(n log n) | Highly efficient on many types of real-world data. |
+/// | **Worst Time** | O(n log n) | Guaranteed logarithmic time for merging runs. |
+/// | **Space Complexity** | O(n) | Requires auxiliary space for the merging process. |
+///
+/// ## Properties
+///
+/// * **Stable:** Maintains the relative order of elements with equal values.
+/// * **Adaptive:** Performance improves significantly on partially sorted data.
+/// * **Not-In-place:** Requires additional memory for temporary storage during merges.
+///
+/// ## Example
+///
+/// ```rust
+/// use mycollections::sort::tim_sort;
+///
+/// let mut numbers = [5, 1, 9, 3, 7, 4, 8, 2, 6];
+/// tim_sort(&mut numbers);
+///
+/// assert_eq!(numbers, [1, 2, 3, 4, 5, 6, 7, 8, 9]);
+/// ```
 pub fn tim_sort<T: Ord + Clone>(array: &mut [T]) {
     const RUN: usize = 32;
     let len = array.len();

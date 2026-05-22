@@ -1,12 +1,34 @@
-/// Sorts a slice using introsort (hybrid of quick sort and heap sort).
+/// # Introsort
 ///
-/// Switches to heap sort when recursion depth exceeds a limit.
+/// A **hybrid** sorting algorithm that provides both fast average performance
+/// and optimal worst-case behavior. It begins with Quick Sort and switches to
+/// Heap Sort when the recursion depth exceeds a predefined limit.
 ///
-/// # Performance
+/// ## Complexity Analysis
 ///
-/// * **Time Complexity**: O(n log n)
-/// * **Space Complexity**: O(log n)
-/// * **Stability**: Unstable
+/// | Metric | Complexity | Note |
+/// | :--- | :--- | :--- |
+/// | **Best Time** | O(n log n) | Consistent with quick sort's ideal partitions. |
+/// | **Average Time** | O(n log n) | Highly efficient for most general cases. |
+/// | **Worst Time** | O(n log n) | Guaranteed by switching to heap sort. |
+/// | **Space Complexity** | O(log n) | Space used for the recursive stack. |
+///
+/// ## Properties
+///
+/// * **Not-Stable:** Does not maintain the relative order of equal elements.
+/// * **Not-adaptive:** Does not significantly speed up for partially sorted data.
+/// * **In-place:** Performs sorting within the original memory allocation.
+///
+/// ## Example
+///
+/// ```rust
+/// use mycollections::sort::intro_sort;
+///
+/// let mut numbers = [42, 32, 33, 52, 37, 47, 51];
+/// intro_sort(&mut numbers);
+///
+/// assert_eq!(numbers, [32, 33, 37, 42, 47, 51, 52]);
+/// ```
 pub fn intro_sort<T: Ord>(array: &mut [T]) {
     let depth = (array.len() as f64).log2() as usize * 2;
     introsort_rec(array, depth);
