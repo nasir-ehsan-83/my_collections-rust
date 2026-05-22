@@ -1,26 +1,31 @@
-pub mod comparison;
-pub mod distribution;
-pub mod hybrid;
+mod comparison;
+mod concurrent;
+mod distribution;
+mod hybrid;
 
+#[doc(inline)]
+pub use comparison::bubble_sort;
+pub use comparison::cocktail_shaker_sort;
+pub use comparison::odd_even_sort;
+pub use comparison::gnome_sort;
+pub use comparison::comb_sort;
+pub use comparison::insertion_sort;
+pub use comparison::shell_sort;
+pub use comparison::heap_sort;
+pub use comparison::pancake_sort;
+pub use comparison::selection_sort;
+pub use comparison::quick_sort;
+pub use comparison::merge_sort;
+pub use comparison::tree_sort;
 
-pub use comparison::insertion::insertion_sort;
-pub use comparison::bubble::bubble_sort;
-pub use comparison::selection::selection_sort;
-pub use comparison::shell::shell_sort;
-pub use comparison::gnome::gnome_sort;
-pub use comparison::cocktail_shaker::cocktail_shaker_sort;
-pub use comparison::odd_even::odd_even_sort;
-pub use comparison::comb::comb_sort;
-pub use comparison::tree::tree_sort;
-pub use comparison::heap::heap_sort;
+#[doc(inline)]
+pub use concurrent::bitonic_sort;
 
-pub use distribution::radix::radix_sort;
-pub use distribution::counting::counting_sort;
-pub use distribution::bucket::bucket_sort;
+#[doc(inline)]
+pub use distribution::radix_sort;
+pub use distribution::counting_sort;
+pub use distribution::bucket_sort;
 
-pub use hybrid::quick::quick_sort;
-pub use hybrid::merge::merge_sort;
-pub use hybrid::pancake::pancake_sort;
-pub use hybrid::tim::tim_sort;
-pub use hybrid::bitonic::bitonic_sort;
-pub use hybrid::intro::intro_sort;
+#[doc(inline)]
+pub use hybrid::tim_sort;
+pub use hybrid::intro_sort;

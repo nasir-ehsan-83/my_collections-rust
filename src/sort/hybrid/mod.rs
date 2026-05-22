@@ -1,6 +1,5 @@
-pub mod quick;
-pub mod merge;
-pub mod pancake;
-pub mod tim;
-pub mod bitonic;
-pub mod intro;
+mod tim;
+mod intro;
+
+pub use tim::tim_sort;
+pub use intro::intro_sort;

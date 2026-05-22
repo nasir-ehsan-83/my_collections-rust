@@ -1,4 +1,4 @@
-use super::merge::merge;
+use crate::sort::comparison::merge;
 /// # Timsort
 ///
 /// A **hybrid** sorting algorithm derived from merge sort and insertion sort.
