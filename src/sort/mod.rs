@@ -17,6 +17,7 @@ pub use comparison::selection_sort;
 pub use comparison::quick_sort;
 pub use comparison::merge_sort;
 pub use comparison::tree_sort;
+pub use comparison::cycle_sort;
 
 #[doc(inline)]
 pub use concurrent::bitonic_sort;

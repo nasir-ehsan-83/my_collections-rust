@@ -26,7 +26,8 @@ pub use insertion::{
     shell::shell_sort
 };
 pub use selection::{
+    cycle::cycle_sort,
+    heap::heap_sort,
     pancake::pancake_sort,
-    selection::selection_sort,
-    heap::heap_sort
+    selection::selection_sort
 };
