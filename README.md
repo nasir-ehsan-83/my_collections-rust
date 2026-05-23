@@ -1,145 +1,128 @@
-# 🦀 mycollections-rust
+# mycollections-rust
 
-![Rust](https://shields.io)
-![Status](https://shields.io)
-![License](https://shields.io)
+![Rust](https://img.shields.io/badge/Rust-Language-orange)
+![Status](https://img.shields.io/badge/status-in--progress-yellow)
+![License](https://img.shields.io/badge/license-MIT-blue)
 
-A modern and educational collection of **Data Structures and Algorithms implemented in Rust**.
+A collection of data structures and algorithms implemented in Rust with an emphasis on ownership-aware APIs, predictable performance, and low-level implementation details.
 
-This project focuses on writing clean, efficient, and idiomatic Rust while building a strong understanding of algorithm design, memory safety, ownership, and performance optimization.
-
----
-
-## ✨ Goals
-
-- Build production-quality implementations of core algorithms and data structures.
-- Explore low-level memory concepts through safe and idiomatic Rust.
-- Provide clear documentation and practical examples for learning purposes.
-- Create a scalable and organized codebase for future expansion.
+The project explores how classic algorithms and data structures can be designed using idiomatic Rust while maintaining explicit memory semantics and minimal abstraction overhead.
 
 ---
 
-## 📂 Project Structure
+## Scope
+
+Current and planned implementations include:
+
+- Sorting algorithms
+- Core data structures
+- Searching algorithms
+- Dynamic programming
+- Graph algorithms
+- String processing algorithms
+
+---
+
+## Project Structure
 
 ```text
 src/
-├── sort/                   # Sorting algorithms
-├── collections/            # Data structures (Planned)
-├── search/                 # Searching algorithms (Planned)
-├── dynamic_programming/    # Dynamic programming (Planned)
-├── graph_algorithms/       # Graph-related algorithms (Planned)
-└── string/                 # String algorithms (Planned)
+├── sort/
+├── collections/
+├── search/
+├── dynamic_programming/
+├── graph_algorithms/
+└── string/
 ```
 
 ---
 
-## 📌 Current Progress
+## Implemented
 
-### ✅ Sorting Algorithms
-Implemented a wide range of sorting techniques, including:
-- **Comparison Sorts:** Bubble, Selection, Insertion, Shell, Heap, Tree Sort.
-- **Hybrid Sorts:** Merge Sort, Quick Sort, TimSort, IntroSort.
-- **Distribution Sorts:** Counting Sort, Radix Sort, Bucket Sort.
-- **Others:** Cocktail Shaker, Comb, Gnome, Odd-Even, Pancake, Bitonic Sort.
+### Sorting Algorithms
+- Bubble Sort
+- Selection Sort
+- Insertion Sort
+- Shell Sort
+- Heap Sort
+- Merge Sort
+- Quick Sort
+- TimSort
+- IntroSort
+- Counting Sort
+- Radix Sort
+- Bucket Sort
 
----
-
-## 🚧 Planned Implementations
-
-### 📦 Data Structures
-- Linked Lists (Singly/Doubly)
-- Deques & Ring Buffers
-- Binary Search Trees (BST)
-- AVL & Red-Black Trees
-- Trie & Segment Trees
-- Heaps & Priority Queues
-- Graph Representations (Adjacency List/Matrix)
-- Disjoint Set Union (DSU)
-
-### 🔍 Searching Algorithms
-- Linear Search
-- Binary Search
-- Jump Search
-- Interpolation Search
-- Exponential Search
-
-### 🧠 Dynamic Programming
-- Knapsack (0/1)
-- Longest Common Subsequence (LCS)
-- Longest Increasing Subsequence (LIS)
-- Edit Distance (Levenshtein)
-- Coin Change
-
-### 🕸 Graph Algorithms
-- Dijkstra's Shortest Path
-- Bellman-Ford
-- Floyd-Warshall
-- Prim & Kruskal (MST)
-- Topological Sort
-
-### 📝 String & Math Algorithms
-- KMP (Knuth-Morris-Pratt)
-- Rabin-Karp
-- Boyer-Moore
-- Sieve of Eratosthenes
-- Euclidean GCD
-- Fast Exponentiation
+*Additional variants and optimizations are added incrementally as the project evolves.*
 
 ---
 
-## 📚 Documentation
+## Design Focus
 
-Every implementation is designed to be both practical and educational. 
-The documentation aims to explain not only how an algorithm works, but also why specific Rust patterns and design decisions are used.
+The implementations are written with attention to:
 
-**Documentation includes:**
-- Algorithm explanations
-- Time and space complexity analysis
-- Ownership and memory-safety notes
-- Generic programming techniques
-- Usage examples and unit tests
+*   Ownership and borrowing semantics
+*   Generic and reusable APIs
+*   Allocation-aware design
+*   Iterator-oriented patterns
+*   Predictable complexity characteristics
+*   Low-level implementation trade-offs
+*   Zero-cost abstractions where applicable
+
+**Some modules may later include:**
+*   Benchmarking
+*   Allocation profiling
+*   Implementation comparisons
+*   Unsafe vs safe implementation analysis
 
 ---
 
-## 🚀 Getting Started
+## Documentation
 
-### 1. Install Rust
+Each module is intended to document:
+
+- Algorithmic complexity
+- Implementation details
+- API behavior
+- Ownership trade-offs
+- Rust-specific design decisions
+
+*Examples and tests are written alongside implementations whenever possible.*
+
+---
+
+## Getting Started
+
+### Install Rust
 ```bash
-curl --proto '=https' --tlsv1.2 -sSf https://rustup.rs | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-### 2. Clone the Repository
+### Clone the Repository
 ```bash
-git clone https://github.com
+git clone https://github.com/nasir-ehsan-83/mycollections-rust
 cd mycollections-rust
 ```
 
-### 3. Run Tests
+### Run Tests
 ```bash
 cargo test
 ```
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
-Contributions, suggestions, and improvements are always welcome. 
-If you would like to contribute, feel free to open an issue or submit a pull request.
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License**.
+Implementation improvements, optimizations, and corrections are welcome.
 
 ---
 
-## 👨‍💻 Author
+## License
 
-Created and maintained by **Nasir Ahmad Ehsan**
+Licensed under the MIT License.
 
 ---
 
-## ⭐ Support
+## Author
 
-If you find this project useful, consider giving it a star on GitHub!
+**Nasir Ahmad Ehsan**
